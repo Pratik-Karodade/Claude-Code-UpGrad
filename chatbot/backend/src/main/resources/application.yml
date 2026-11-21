@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: caramel-support-chat
+  ai:
+    google:
+      genai:
+        # Read from the environment. An unset variable becomes an empty string, and ModelConfig
+        # then fails fast at startup with a clear message. The key is never committed.
+        api-key: ${GOOGLE_API_KEY:}
+        chat:
+          options:
+            model: gemma-4-26b-a4b-it
+            temperature: 0.3
+            max-output-tokens: 1024
+
+caramel:
+  chat:
+    model: gemma-4-26b-a4b-it
+    temperature: 0.3
+    max-tokens: 1024
+    max-message-chars: 2000
+    memory-window: 20
+    memory-idle-timeout: 30m
+    cors-allowed-origin: http://localhost:5173
+
+logging:
+  level:
+    root: INFO

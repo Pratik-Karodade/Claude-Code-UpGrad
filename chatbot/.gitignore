@@ -1,0 +1,19 @@
+# Backend (Maven / Spring Boot)
+backend/target/
+
+# Frontend (Node / Vite)
+frontend/node_modules/
+frontend/dist/
+
+# Secrets and local configuration
+.env
+.env.*
+application-local.yml
+.mcp.json
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
